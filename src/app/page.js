@@ -66,21 +66,21 @@ export default function Home() {
               <div className="grid grid-cols-2 gap-4 mx-12">
                 <div className="border h-[60vh] flex items-center justify-center">
                   <iframe
-                    src="http://localhost:3001/Chat/qwertyuiop1"
+                    src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop1"
                     title="Project Preview 1"
                     className="w-full h-full rounded-lg overscroll-auto"
                   />
                 </div>
                 <div className="border h-[60vh] flex items-center justify-center">
                   <iframe
-                    src="http://localhost:3001/Chat/qwertyuiop2"
+                    src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop2"
                     title="Project Preview 1"
                     className="w-full h-full rounded-lg overscroll-auto"
                   />
                 </div>
                 <div className="border h-[60vh] flex items-center justify-center">
                   <iframe
-                    src="http://localhost:3001/Chat/qwertyuiop3"
+                    src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop3"
                     title="Project Preview 1"
                     className="w-full h-full rounded-lg overscroll-auto"
                   />
