@@ -1,10 +1,9 @@
-import React from 'react';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { oneDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import React from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const Projecthighlight = () => {
-    const prismacode =
-        `generator client {
+  const prismacode = `generator client {
     provider = "prisma-client-js"
 }
 
@@ -74,15 +73,15 @@ model Message {
     updatedAt      DateTime     @updatedAt
 };`;
 
-    return (
-        <>
-            <div className="text-white w-full h-full overflow-y-scroll custom-scrollbar rounded-lg bg-cover overflow-hidden">
-                <SyntaxHighlighter language="javascript" style={oneDark}>
-                    {prismacode}
-                </SyntaxHighlighter>
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className="text-white w-full h-full overflow-y-scroll custom-scrollbar rounded-lg bg-cover overflow-hidden">
+        <SyntaxHighlighter language="javascript" style={oneDark}>
+          {prismacode}
+        </SyntaxHighlighter>
+      </div>
+    </>
+  );
 };
 
 export default Projecthighlight;

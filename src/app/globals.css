@@ -27,15 +27,17 @@ body {
 }
 
 
+
 .custom-scrollbar::-webkit-scrollbar {
-  width: 12px; /* ปรับความกว้างของ scrollbar ตามต้องการ */
+  width: 12px; /* ความกว้างของ scrollbar แนวตั้ง */
+  height: 12px; /* ความสูงของ scrollbar แนวนอน */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background-color: #2d3748; /* สีพื้นหลังของแทร็ก scrollbar (ให้ตรงกับสี bg ของคุณ) */
+  background-color: #2d3748; /* สีพื้นหลังของแทร็ก scrollbar */
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #cfcfcf; /* สีของตัวเลื่อน scrollbar (ให้ตรงกับสี theme ของคุณ) */
-  border-radius: 5px; /* ปรับความโค้งมุมของตัวเลื่อน scrollbar ตามต้องการ */
+  background-color: #cfcfcf; /* สีของตัวเลื่อน scrollbar */
+  border-radius: 5px; /* ปรับความโค้งมุมของตัวเลื่อน scrollbar */
 }
