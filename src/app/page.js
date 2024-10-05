@@ -6,8 +6,9 @@ import Skills from "@/components/skills";
 import { useState, useEffect } from "react";
 import Codeblock from "@/components/codeblock";
 import Time from "@/components/time";
-import Github from "@/components/github";
+import Github_1 from "@/components/github";
 import Profile from "@/components/profile";
+import { Facebook, Instagram, Github, PhoneIncoming } from "lucide-react";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -132,11 +133,7 @@ export default function Home() {
         {/* Skills */}
         <section className="mb-4 mx-12 mt-12">
           <h2 className="text-2xl font-semibold mb-6 ">
-            {language === "EN" ? (
-              <span>Skills</span>
-            ) : (
-              <span>ทักษะ</span>
-            )}
+            {language === "EN" ? <span>Skills</span> : <span>ทักษะ</span>}
           </h2>
           <div className="flex justify-between">
             <Skills />
@@ -145,12 +142,53 @@ export default function Home() {
 
         {/* Available Time to Work */}
         <section className="mb-4 mx-12 mt-12">
-          <Time language={language}/>
+          <Time language={language} />
         </section>
 
         {/* My GitHub */}
         <section className="mb-4 mx-12 mt-12" id="my-github">
-          <Github language={language} />
+          <Github_1 language={language} />
+        </section>
+        <section className="mx-12 my-12" id="my-github">
+          <div className="mx-12 flex flex-col">
+            <div className="flex flex-row border h-max">
+              <div className="h-1/2 w-1/3 flex justify-start mx-6 mt-6 mb-6 flex-col">
+                <div className="w-full h-max">
+                  <p className="">
+                    {language === "EN" ? (
+                      <span>
+                        Here is my GitHub where I built this portfolio. If you
+                        want to see how I work, how much time I spend, or my
+                        coding style, feel free to check it out on this GitHub.
+                      </span>
+                    ) : (
+                      <span>
+                        {" "}
+                        นี่คือ github ของผมที่ทำ portfolio นี้
+                        ถ้าคุณอยากรู้ว่าผมทำงานยังไง ใช้เวลาเท่าไหร่
+                        เขียนโค้ดสไตล์ไหน สามารถดูที่ github นี้ได้เลย
+                      </span>
+                    )}
+                  </p>
+                </div>
+              </div>
+              <div className="w-2/3 border overflow-hidden">
+                <h1 className="text-xl font-semibold mt-8 ml-6">
+                  <li className="text-lg flex flex-row space-x-1">
+                    <Github strokeWidth={1.5} />
+                    <span>
+                      <a href="https://github.com/Shinon2023/my-portfolio">
+                        Shinon2023 / my-portfolio
+                      </a>
+                    </span>
+                  </li>
+                </h1>
+                <div className="h-full rounded ml-16 mt-3 flex flex-col">
+                  <ul className="flex flex-col flex-1 space-y-4"></ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
