@@ -1,44 +1,76 @@
 import React from "react";
 
-export default function Time() {
+export default function Time({ language }) {
   return (
     <>
-      <h2 className="text-2xl font-semibold">Available Time to Work</h2>
-      <table className="table-auto w-full text-center border mx-12 mt-6">
+      <h2 className="text-2xl font-semibold">
+        {language === "EN" ? (
+          <span>Available Time to Work</span>
+        ) : (
+          <span>ช่วงเวลาที่ว่างพร้อมทำงาน</span>
+        )}
+      </h2>
+      <table className="table-auto w-[95%] text-center border mx-12 mt-6">
         <thead>
           <tr>
-            <th className="border px-4 py-2">Day</th>
-            <th className="border px-4 py-2">Availability</th>
+            <th className="border px-4 py-2">
+              {language === "EN" ? <span>Day</span> : <span>วัน</span>}
+            </th>
+            <th className="border px-4 py-2">
+              {language === "EN" ? <span>Time</span> : <span>เวลา</span>}
+            </th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td className="border px-4 py-2">Sunday</td>
-            <td className="border px-4 py-2">All day</td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Sunday</span> : <span>วันอาทิตย์</span>}
+            </td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>All day</span> : <span>ทั้งวัน</span>}
+            </td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">Monday</td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Monday</span> : <span>วันจันทร์</span>}
+            </td>
             <td className="border px-4 py-2">9 AM - 2:30 PM</td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">Tuesday</td>
-            <td className="border px-4 py-2">Unavailable</td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Tuesday</span> : <span>วันอังคาร</span>}
+            </td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Unavailable</span> : <span>ไม่ว่าง</span>}
+            </td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">Wendnesday</td>
-            <td className="border px-4 py-2">All day</td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Wednesday</span> : <span>วันพุธ</span>}
+            </td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>All day</span> : <span>ทั้งวัน</span>}
+            </td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">Thursday</td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Thursday</span> : <span>วันพฤหัสบดี</span>}
+            </td>
             <td className="border px-4 py-2">9 AM - 2:30 PM</td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">Friday</td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Friday</span> : <span>วันศุกร์</span>}
+            </td>
             <td className="border px-4 py-2">9 AM - 2:30 PM</td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">Saturday</td>
-            <td className="border px-4 py-2">Unavailable</td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Saturday</span> : <span>วันเสาร์</span>}
+            </td>
+            <td className="border px-4 py-2">
+              {language === "EN" ? <span>Unavailable</span> : <span>ไม่ว่าง</span>}
+            </td>
           </tr>
           {/* Add more rows as needed */}
         </tbody>

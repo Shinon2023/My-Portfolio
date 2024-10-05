@@ -13,7 +13,9 @@ const Header = ({ darkMode, toggleDarkMode, language, toggleLanguage }) => {
       <div className=" ml-6 flex justify-between items-center">
         {/* Navigation Links */}
         <div className="flex space-x-4">
-          <h1 className="text-2xl font-bold ">Shinon's Portfolio</h1>
+          <a href="#project-highlights">
+            <h1 className="text-2xl font-bold ">{language === "TH" ? "ผลงานของ shinon(ชื่อเล่นผมนี่แหละ)" : "Shinon's Portfolio"}</h1>
+          </a>
           <button
             className={`${
               darkMode
@@ -21,7 +23,7 @@ const Header = ({ darkMode, toggleDarkMode, language, toggleLanguage }) => {
                 : "bg-white text-black hover:bg-black hover:text-white"
             } px-3 py-2 rounded-lg transition duration-750`}
           >
-            <Link href="/about">About Me</Link>
+            <Link href="#about-me">{language === "TH" ? "เกี่ยวกับผม" : "About Me"}</Link>
           </button>
           <button
             className={`${
@@ -30,19 +32,7 @@ const Header = ({ darkMode, toggleDarkMode, language, toggleLanguage }) => {
                 : "bg-white text-black hover:bg-black hover:text-white"
             } px-3 py-2 rounded-lg transition duration-750`}
           >
-            <Link href="/projects">Project</Link>
-          </button>
-          <button
-            onClick={() =>
-              window.open("https://github.com/shinon2023", "_blank")
-            }
-            className={`${
-              darkMode
-                ? "bg-black text-white hover:bg-white hover:text-black"
-                : "bg-white text-black hover:bg-black hover:text-white"
-            } px-3 py-2 rounded-lg transition duration-750`}
-          >
-            GitHub
+            <Link href="#my-github">{language === "TH" ? "โปรเจค" : "Project"}</Link>
           </button>
         </div>
 
