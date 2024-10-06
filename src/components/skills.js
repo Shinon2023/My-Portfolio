@@ -60,6 +60,7 @@ export default function Skills() {
         alt="GIF example"
         width={300} // Set the width and height accordingly
         height={100}
+        className="justify-center mx-auto"
         unoptimized // Prevents optimization, required for GIFs to work properly
       />
       <div className="mx-12 w-full">

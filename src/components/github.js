@@ -20,14 +20,14 @@ import image8project3 from "@/../public/image/github/project-3/Screenshot 2024-1
 export default function Github({ language }) {
   return (
     <>
-      <h2 className="text-2xl font-semibold">My GitHub</h2>
-      <ul className="mx-12 mt-6">
+      <h2 className="text-2xl font-semibold lg:mx-0 mx-6">My GitHub</h2>
+      <ul className="lg:mx-12 mt-6">
         <li className="border-b border-gray-300 mb-12">
           <h2 className="text-xl font-semibold ml-12">
             {language === "EN" ? <span>Project 1</span> : <span>โปรเจค 1</span>}
           </h2>
           <div className="border p-4 mt-4 mx-12 mb-12">
-            <div className="flex h-[30vh]">
+            <div className="flex h-max lg:flex-row flex-col">
               <p
                 className="w-full text-lg text-left text-balance"
                 style={{ textIndent: "50px" }}
@@ -66,9 +66,9 @@ export default function Github({ language }) {
               <Codeblock_1 />
             </div>
           </div>
-          <div className="relative w-full flex gap-24 snap-mandatory snap-x overflow-x-auto h-[90vh]">
+          <div className="relative w-full flex gap-24 snap-mandatory snap-x overflow-x-auto lg:h-[90vh] h-[30vh]">
             <Image
-              className="snap-center shrink-0 last:pr-8 w-[90%] h-[90%] bg-cover bg-center rounded-lg shadow-xl ml-36"
+              className="snap-center shrink-0 last:pr-8 lg:w-[90%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl ml-36 w-[80%] h-[100%]"
               alt="project-1"
               src={image1project1}
               width={160}
@@ -76,7 +76,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 last:pr-8 w-[90%] h-[90%] bg-cover bg-center rounded-lg shadow-xl"
+              className="snap-center shrink-0 first:pl-8 last:pr-8 lg:w-[90%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl ml-36 w-[80%] h-[100%]"
               src={image2project1}
               alt="project-1"
               width={160} // Set the width and height accordingly
@@ -84,7 +84,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 last:pr-8 w-[90%] h-[90%] bg-cover bg-center rounded-lg shadow-xl"
+              className="snap-center shrink-0 first:pl-8 last:pr-8 lg:w-[90%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl ml-36 w-[80%] h-[100%]"
               src={image3project1}
               alt="project-1"
               width={160} // Set the width and height accordingly
@@ -92,7 +92,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 w-[90%] h-[90%] bg-cover bg-center rounded-lg shadow-xl mr-36"
+              className="snap-center shrink-0 first:pl-8 lg:w-[90%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl mr-36 w-[80%] h-[100%]"
               src={image4project1}
               alt="project-1"
               width={160} // Set the width and height accordingly
@@ -100,7 +100,7 @@ export default function Github({ language }) {
               unoptimized
             />
           </div>
-          <div className="h-[75vh] flex items-center justify-center mt-12 mx-12 mb-12">
+          <div className="lg:h-[75vh] flex items-center justify-center mt-12 mx-12 mb-12">
             <iframe
               width="560"
               height="315"
@@ -117,7 +117,7 @@ export default function Github({ language }) {
             {language === "EN" ? <span>Project 2</span> : <span>โปรเจค 2</span>}
           </h2>
           <div className="border p-4 mt-4 mx-12 mb-12">
-            <div className="flex h-[30vh]">
+            <div className="flex h-max lg:flex-row flex-col">
               <p
                 className="w-full text-lg text-left text-balance"
                 style={{ textIndent: "50px" }}
@@ -152,7 +152,7 @@ export default function Github({ language }) {
               <Codeblock_2 />
             </div>
           </div>
-          <div className="h-[75vh] flex items-center justify-center mt-12 mx-12 mb-12">
+          <div className="lg:h-[75vh] flex items-center justify-center mt-12 mx-12 mb-12">
             <iframe
               width="560"
               height="315"
@@ -170,7 +170,7 @@ export default function Github({ language }) {
             {language === "EN" ? <span>Project 3</span> : <span>โปรเจค 3</span>}
           </h2>
           <div className="border p-4 mt-4 mx-12 mb-12">
-            <div className="flex h-[30vh]">
+            <div className="flex h-max lg:flex-row flex-col">
               <p
                 className="w-full text-lg text-left text-balance"
                 style={{ textIndent: "50px" }}
@@ -199,9 +199,9 @@ export default function Github({ language }) {
               <Codeblock_3 />
             </div>
           </div>
-          <div className=" w-full flex gap-[50vw] snap-mandatory snap-x overflow-x-auto h-[90vh]">
+          <div className=" w-full flex gap-[50vw] snap-mandatory snap-x overflow-x-auto h-[50vh]">
             <Image
-              className="snap-center shrink-0 last:pr-8 w-[20%] h-[90%] bg-cover bg-center rounded-lg shadow-xl ml-[50vw]"
+              className="snap-center shrink-0 last:pr-8 lg:w-[20%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl ml-[50vw] h-max"
               src={image1project3}
               alt="project-2"
               width={160}
@@ -209,7 +209,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 last:pr-8 w-[20%] h-[90%] bg-cover bg-center rounded-lg shadow-xl"
+              className="snap-center shrink-0 first:pl-8 last:pr-8 lg:w-[20%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl h-max"
               src={image2project3}
               alt="project-2"
               width={160} // Set the width and height accordingly
@@ -217,7 +217,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 last:pr-8 w-[20%] h-[90%] bg-cover bg-center rounded-lg shadow-xl"
+              className="snap-center shrink-0 first:pl-8 last:pr-8 lg:w-[20%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl h-max"
               src={image3project3}
               alt="project-2"
               width={160} // Set the width and height accordingly
@@ -225,7 +225,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 last:pr-8 w-[20%] h-[90%] bg-cover bg-center rounded-lg shadow-xl"
+              className="snap-center shrink-0 first:pl-8 last:pr-8 lg:w-[20%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl h-max"
               src={image4project3}
               alt="project-2"
               width={160} // Set the width and height accordingly
@@ -233,7 +233,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 last:pr-8 w-[20%] h-[90%] bg-cover bg-center rounded-lg shadow-xl"
+              className="snap-center shrink-0 first:pl-8 last:pr-8 lg:w-[20%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl h-max"
               src={image6project3}
               alt="project-2"
               width={160} // Set the width and height accordingly
@@ -241,7 +241,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 last:pr-8 w-[20%] h-[90%] bg-cover bg-center rounded-lg shadow-xl"
+              className="snap-center shrink-0 first:pl-8 last:pr-8 lg:w-[20%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl h-max"
               src={image7project3}
               alt="project-2"
               width={160} // Set the width and height accordingly
@@ -249,7 +249,7 @@ export default function Github({ language }) {
               unoptimized
             />
             <Image
-              className="snap-center shrink-0 first:pl-8 w-[20%] h-[90%] bg-cover bg-center rounded-lg shadow-xl mr-[50vw]"
+              className="snap-center shrink-0 first:pl-8 lg:w-[20%] lg:h-[90%] bg-cover bg-center rounded-lg shadow-xl mr-[50vw] h-max"
               src={image8project3}
               alt="project-2"
               width={160} // Set the width and height accordingly
@@ -257,7 +257,7 @@ export default function Github({ language }) {
               unoptimized
             />
           </div>
-          <div className="h-[75vh] flex items-center justify-center mt-12 mx-12 mb-64">
+          <div className="lg:h-[75vh] flex items-center justify-center mt-12 mx-12 mb-12">
             <iframe
               width="560"
               height="315"

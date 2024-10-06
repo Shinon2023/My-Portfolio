@@ -58,7 +58,7 @@ export default function codeblock_2() {
             └── UI_white_icons.png`;
   return (
     <>
-      <div className="text-white w-full h-full overflow-y-scroll custom-scrollbar rounded-lg bg-cover overflow-hidden">
+      <div className="text-white w-full h-[30vh] overflow-y-scroll custom-scrollbar rounded-lg bg-cover overflow-hidden">
         <SyntaxHighlighter language="markdown" style={oneDark}>
           {structuretree}
         </SyntaxHighlighter>

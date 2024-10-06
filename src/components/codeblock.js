@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
@@ -72,11 +72,31 @@ model Message {
     createdAt      DateTime     @default(now())
     updatedAt      DateTime     @updatedAt
 };`;
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // สามารถปรับขนาดที่ต้องการได้
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // เรียกใช้ทันทีเมื่อเริ่มต้น
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <>
-      <div className="text-white w-full h-full overflow-y-scroll custom-scrollbar rounded-lg bg-cover overflow-hidden">
-        <SyntaxHighlighter language="javascript" style={oneDark}>
+      <div className="text-white w-full h-full overflow-y-scroll custom-scrollbar rounded-lg bg-cover overflow-hidden lg:scale-100">
+        <SyntaxHighlighter
+          language="javascript"
+          style={oneDark}
+          customStyle={{
+            fontSize: isMobile ? "0.8rem" : "1rem", // ปรับขนาดตัวอักษรเฉพาะมือถือ
+            width: "100%", // ให้ความกว้างเต็มที่
+            overflowX: "auto", // เพิ่ม scroll สำหรับแกน x
+          }}
+        >
           {prismacode}
         </SyntaxHighlighter>
       </div>

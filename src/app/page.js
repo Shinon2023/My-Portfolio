@@ -13,6 +13,36 @@ import { Facebook, Instagram, Github, PhoneIncoming } from "lucide-react";
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState("EN");
+  const [iframeStyle, setIframeStyle] = useState({});
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.matchMedia("(max-width: 640px)").matches) {
+                // สำหรับมือถือ
+                setIframeStyle({
+                    transform: "scale(0.4)",
+                    transformOrigin: "0 0",
+                    backfaceVisibility: "hidden",
+                    border: "none",
+                });
+            } else {
+                // สำหรับขนาดหน้าจออื่น
+                setIframeStyle({
+                    transform: "scale(1)", // หรือค่าที่ต้องการ
+                    transformOrigin: "0 0",
+                    backfaceVisibility: "hidden",
+                    border: "none",
+                });
+            }
+        };
+
+        handleResize(); // เรียกใช้ครั้งแรกเพื่อกำหนดค่าเริ่มต้น
+        window.addEventListener("resize", handleResize);
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem("darkMode");
@@ -43,11 +73,11 @@ export default function Home() {
         language={language}
         toggleLanguage={toggleLanguage}
       />
-      <div className=" flex flex-col">
+      <div className="flex flex-col">
         {/* Project Highlights */}
         <div className="p-6">
           <main>
-            <section className="mb-4 mx-12" id="project-highlights">
+            <section className="mb-4 lg:mx-12" id="project-highlights">
               <div className="flex justify-between">
                 <h2 className="text-2xl font-semibold mb-6">
                   {language === "EN" ? (
@@ -64,33 +94,37 @@ export default function Home() {
                   )}
                 </h5>
               </div>
-              <div className="grid grid-cols-2 gap-4 mx-12">
-                <div className="border h-[60vh] flex items-center justify-center">
+              <div className="grid lg:grid-cols-2 gap-4 mx-12 grid-cols-1">
+                <div className="border lg:h-[60vh] flex items-center justify-center h-[20vh] overflow-hidden relative rounded-lg">
                   <iframe
                     src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop1"
-                    title="Project Preview 1"
-                    className="w-full h-full rounded-lg overscroll-auto"
+                    title="Project Preview 2"
+                    className="absolute top-0 left-0 w-[1000px] h-[250%] rounded-lg bg-slate-800"
+                    style={iframeStyle}
                   />
                 </div>
-                <div className="border h-[60vh] flex items-center justify-center">
+                <div className="border lg:h-[60vh] flex items-center justify-center h-[20vh] overflow-hidden relative rounded-lg">
                   <iframe
                     src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop2"
-                    title="Project Preview 1"
-                    className="w-full h-full rounded-lg overscroll-auto"
+                    title="Project Preview 2"
+                    className="absolute top-0 left-0 w-[1000px] h-[250%] rounded-lg bg-slate-800"
+                    style={iframeStyle}
                   />
                 </div>
-                <div className="border h-[60vh] flex items-center justify-center">
+                <div className="border lg:h-[60vh] flex items-center justify-center h-[20vh] overflow-hidden relative rounded-lg">
                   <iframe
                     src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop3"
-                    title="Project Preview 1"
-                    className="w-full h-full rounded-lg overscroll-auto"
+                    title="Project Preview 2"
+                    className="absolute top-0 left-0 w-[1000px] h-[250%] rounded-lg bg-slate-800"
+                    style={iframeStyle}
                   />
                 </div>
-                <div className="h-[60vh] flex items-center justify-center">
+                <div className="h-[20vh] flex items-center justify-center translate-x-0 lg:h-[60vh]">
                   <Codeblock />
                 </div>
               </div>
-              <div className="border p-4 mt-4 mx-12">
+
+              <div className="border p-4 mt-4 lg:mx-12">
                 <h3 className="text-lg font-semibold mb-2">Description</h3>
                 <p>
                   {language === "EN" ? (
@@ -135,21 +169,21 @@ export default function Home() {
           <h2 className="text-2xl font-semibold mb-6 ">
             {language === "EN" ? <span>Skills</span> : <span>ทักษะ</span>}
           </h2>
-          <div className="flex justify-between">
+          <div className="flex justify-between flex-wrap lg:flex-nowrap">
             <Skills />
           </div>
         </section>
 
         {/* Available Time to Work */}
-        <section className="mb-4 mx-12 mt-12">
+        <section className="mb-4 lg:mx-12 mt-12">
           <Time language={language} />
         </section>
 
         {/* My GitHub */}
-        <section className="mb-4 mx-12 mt-12" id="my-github">
+        <section className="mb-4 lg:mx-12 mt-12" id="my-github">
           <Github_1 language={language} />
         </section>
-        <section className="mx-12 my-12" id="my-github">
+        <section className="lg:mx-12 my-12" id="my-github">
           <div className="mx-12 flex flex-col">
             <div className="flex flex-row border h-max">
               <div className="h-1/2 w-1/3 flex justify-start mx-6 mt-6 mb-6 flex-col">

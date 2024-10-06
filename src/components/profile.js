@@ -6,23 +6,34 @@ import { Facebook, Instagram, Github, PhoneIncoming } from "lucide-react";
 export default function Profile({ language }) {
   return (
     <>
-      <h2 className="text-2xl font-semibold mb-6 ">{language === "EN" ? <span>About Me</span> : <span>เกี่ยวกับตัวผม</span>}</h2>
-      <div className="mx-12 flex flex-col">
-        <div className="flex flex-row border h-[40vh]">
-          <div className="h-1/2 w-1/3 flex justify-start ml-6 mt-6 flex-col">
-            <div className="flex flex-row">
+      <h2 className="text-2xl font-semibold mb-6">
+        {language === "EN" ? (
+          <span>About Me</span>
+        ) : (
+          <span>เกี่ยวกับตัวผม</span>
+        )}
+      </h2>
+      <div className="lg:mx-12 flex flex-col mx-12">
+        <div className="flex lg:flex-row flex-col border lg:h-[40vh] lg:justify-start justify-center">
+          <div className="lg:h-1/2 lg:w-1/3 flex justify-start lg:ml-6 lg:mt-6 flex-col mx-4 mb-4">
+            <div className="flex lg:flex-row flex-col items-center justify-center">
               <Image
-                className="bg-center rounded-full w-32 h-32 bg-white"
+                className="rounded-full w-32 h-32 bg-white"
                 alt="profile"
                 src={imageprofile}
                 width={160}
                 height={160}
                 unoptimized
               />
-              <h1 className="text-3xl font-semibold text-center h-max mx-auto my-auto">
-              {language === "EN" ? <span>Siwat Sroisuwan</span> : <span>ศิวัช สร้อยสุวรรณ</span>}
+              <h1 className="text-3xl font-semibold text-center mx-auto">
+                {language === "EN" ? (
+                  <span>Siwat Sroisuwan</span>
+                ) : (
+                  <span>ศิวัช สร้อยสุวรรณ</span>
+                )}
               </h1>
             </div>
+
             <div className="w-full h-max">
               <p className="mt-6 " style={{ textIndent: "40px" }}>
                 {language === "EN" ? (
@@ -47,9 +58,15 @@ export default function Profile({ language }) {
               </p>
             </div>
           </div>
-          <div className="w-2/3 border overflow-hidden">
-            <h1 className="text-xl font-semibold mt-8 ml-6">{language === "EN" ? <span>Contact</span> : <span>ช่องทางติดต่อ</span>}</h1>
-            <div className="h-full rounded ml-16 mt-3 flex flex-col">
+          <div className="lg:w-2/3 border overflow-hidden">
+            <h1 className="text-xl font-semibold lg:mt-8 ml-6 mt-3">
+              {language === "EN" ? (
+                <span>Contact</span>
+              ) : (
+                <span>ช่องทางติดต่อ</span>
+              )}
+            </h1>
+            <div className="h-full rounded lg:ml-16 ml-6 mt-3 flex flex-col mb-4">
               <ul className="flex flex-col flex-1 space-y-4">
                 <li className="text-lg flex flex-row">
                   <a
