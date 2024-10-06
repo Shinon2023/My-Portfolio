@@ -99,7 +99,7 @@ export default function Home() {
                   <iframe
                     src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop1"
                     title="Project Preview 2"
-                    className="absolute top-0 left-0 w-[1000px] h-[250%] rounded-lg bg-slate-800"
+                    className="absolute top-0 left-0 w-[600px] h-[250%] rounded-lg bg-slate-800"
                     style={iframeStyle}
                   />
                 </div>
@@ -107,7 +107,7 @@ export default function Home() {
                   <iframe
                     src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop2"
                     title="Project Preview 2"
-                    className="absolute top-0 left-0 w-[1000px] h-[250%] rounded-lg bg-slate-800"
+                    className="absolute top-0 left-0 w-[600px] h-[250%] rounded-lg bg-slate-800"
                     style={iframeStyle}
                   />
                 </div>
@@ -115,7 +115,7 @@ export default function Home() {
                   <iframe
                     src="https://chat-app-six-pink.vercel.app/Chat/qwertyuiop3"
                     title="Project Preview 2"
-                    className="absolute top-0 left-0 w-[1000px] h-[250%] rounded-lg bg-slate-800"
+                    className="absolute top-0 left-0 w-[600px] h-[250%] rounded-lg bg-slate-800"
                     style={iframeStyle}
                   />
                 </div>
